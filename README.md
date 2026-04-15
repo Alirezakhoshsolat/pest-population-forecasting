@@ -1,5 +1,3 @@
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
-
 # Pest Population Forecasting
 
 ![Python](https://img.shields.io/badge/python-3.8%2B-yellow)
