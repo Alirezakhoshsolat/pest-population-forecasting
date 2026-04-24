@@ -1,3 +1,14 @@
+---
+title: Pest Forecasting Project
+emoji: 🐜
+colorFrom: blue
+colorTo: green
+sdk: streamlit
+license: mit
+app_file: app.py
+sdk_version: 1.45.1
+---
+
 # Pest Population Forecasting
 
 ![Python](https://img.shields.io/badge/python-3.8%2B-yellow)
@@ -5,38 +16,27 @@
 ![XGBoost](https://img.shields.io/badge/XGBoost-2.0-green)
 ![Streamlit](https://img.shields.io/badge/streamlit-deployed-red)
 
-Dual-task ML pipeline predicting insect population counts (regression) and catch-event occurrence (classification) from meteorological and historical entomological data. Built to replace manual field observation with automated risk estimation for field managers.
+Dual-task ML pipeline predicting insect population counts (regression) and catch-event occurrence (classification) from meteorological and entomological sensor data. Replaces manual field observation with automated risk estimation.
 
 ## Live Demo
 
-The app is deployed on HuggingFace Spaces — field teams can query real-time pest risk estimates from current weather inputs without any manual data handling:
-
-**https://huggingface.co/spaces/parhamaki/Pest_Population_Forecasting**
+[Pest Risk Forecasting Dashboard](https://huggingface.co/spaces/parhamaki/pest-prediction-dashboard)
 
 ## Problem
 
-Field managers traditionally estimated pest risk through manual observation — slow, expensive, and weather-dependent. This project builds two predictive pipelines from sensor data:
-
-- **Regression**: predict daily insect population counts
-- **Classification**: predict whether a catch event will occur (binary)
-
-Feature importance reports make predictions explainable to non-technical stakeholders.
+Field managers estimated pest risk through manual observation: slow, weather-dependent, and hard to scale. This pipeline takes sensor inputs and outputs a population count estimate and a binary catch-event prediction, with feature importance reports for non-technical stakeholders.
 
 ## Approach
 
-### Data & Feature Engineering
+### Data
 
-- Merged meteorological sensor readings with historical entomological catch records
-- Engineered lag features to capture delayed weather-pest relationships
-- Full preprocessing pipeline: imputation, scaling, encoding
+Merged meteorological sensor readings with historical entomological catch records. Lag features capture delayed weather-pest relationships. Full preprocessing covers imputation, scaling, and encoding.
 
-### Models Compared
+### Models
 
-**Regression** (evaluated on MAE):
-- Random Forest, Gradient Boosting, Ridge, SVR, XGBoost, LightGBM
+**Regression** (evaluated on MAE): Random Forest, Gradient Boosting, Ridge, SVR, XGBoost, LightGBM
 
-**Classification** (evaluated on F1):
-- Random Forest, Gradient Boosting, Logistic Regression, SVM, XGBoost, LightGBM
+**Classification** (evaluated on F1): Random Forest, Gradient Boosting, Logistic Regression, SVM, XGBoost, LightGBM
 
 Best models selected through stratified cross-validation. Feature importance reports generated for all final models.
 
@@ -47,17 +47,17 @@ Best models selected through stratified cross-validation. Feature importance rep
 │   ├── Notebook_1_Data_Preprocessing_&_EDA.ipynb
 │   ├── Notebook_2_Regression_Modeling.ipynb
 │   └── Notebook_3_Classification_Modeling.ipynb
-├── models/                        # Serialised model artifacts
-├── utils_eda.py                   # EDA helper functions
-├── utils_regression.py            # Regression pipeline utilities
-├── utils_classification.py        # Classification pipeline utilities
-├── app.py                         # Streamlit application
-├── cleaned_engineered_data.csv    # Feature-engineered dataset
+├── models/
+├── utils_eda.py
+├── utils_regression.py
+├── utils_classification.py
+├── app.py
+├── cleaned_engineered_data.csv
 ├── requirements.txt
 └── README.md
 ```
 
-## Local Setup
+## Setup
 
 ```bash
 git clone https://github.com/Alirezakhoshsolat/pest-population-forecasting.git
@@ -73,4 +73,4 @@ Grade: 30/30
 
 ## License
 
-MIT License
+MIT
