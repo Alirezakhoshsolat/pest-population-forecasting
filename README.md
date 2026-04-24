@@ -1,14 +1,3 @@
----
-title: Pest Forecasting Project
-emoji: 🐜
-colorFrom: blue
-colorTo: green
-sdk: streamlit
-license: mit
-app_file: app.py
-sdk_version: 1.45.1
----
-
 # Pest Population Forecasting
 
 ![Python](https://img.shields.io/badge/python-3.8%2B-yellow)
