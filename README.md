@@ -9,7 +9,7 @@ Dual-task ML pipeline predicting insect population counts (regression) and catch
 
 ## Live Demo
 
-[Pest Risk Forecasting Dashboard](https://huggingface.co/spaces/parhamaki/pest-prediction-dashboard)
+[Pest Risk Forecasting Dashboard](https://huggingface.co/spaces/parhamkhoshsolat/pest-prediction-dashboard)
 
 ## Problem
 
