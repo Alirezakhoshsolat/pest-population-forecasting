@@ -49,7 +49,7 @@ Best models selected through stratified cross-validation. Feature importance rep
 ## Setup
 
 ```bash
-git clone https://github.com/Alirezakhoshsolat/pest-population-forecasting.git
+git clone https://github.com/parhamkhoshsolat/pest-population-forecasting.git
 cd pest-population-forecasting
 pip install -r requirements.txt
 streamlit run app.py
