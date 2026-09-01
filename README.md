@@ -5,7 +5,7 @@
 ![XGBoost](https://img.shields.io/badge/XGBoost-2.0-green)
 ![Streamlit](https://img.shields.io/badge/streamlit-deployed-red)
 
-Dual-task ML pipeline predicting insect population counts (regression) and catch-event occurrence (classification) from meteorological and entomological sensor data. Replaces manual field observation with automated risk estimation.
+Dual-task ML pipeline predicting insect population counts (regression) and catch-event occurrence (classification) from meteorological and entomological sensor data. A risk score per site from weather and trap data. University project on 245 rows across 5 monitoring sites, with the classification threshold tuned on the test set, so treat the scores as optimistic.
 
 ## Live Demo
 
@@ -23,9 +23,9 @@ Merged meteorological sensor readings with historical entomological catch record
 
 ### Models
 
-**Regression** (evaluated on MAE): Random Forest, Gradient Boosting, Ridge, SVR, XGBoost, LightGBM
+**Regression** (6 models): Random Forest, XGBoost, LightGBM, ARIMAX, SARIMAX, Prophet
 
-**Classification** (evaluated on F1): Random Forest, Gradient Boosting, Logistic Regression, SVM, XGBoost, LightGBM
+**Classification** (5 models): Random Forest, XGBoost, LightGBM, LSTM, GRU
 
 Best models selected through stratified cross-validation. Feature importance reports generated for all final models.
 
@@ -58,7 +58,6 @@ streamlit run app.py
 ## Course
 
 Information Systems & Business Intelligence — University of Naples Federico II
-Grade: 30/30
 
 ## License
 
